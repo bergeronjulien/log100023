@@ -31,6 +31,7 @@ public:
     bool get(const std::string &key, int &value);
     void put(const std::string &key, const int &value);
     void remove(const std::string &key);
+    int compteur(cost std::string& key);
 
     std::vector<std::string> getKeys() const;
 
