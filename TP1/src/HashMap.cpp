@@ -103,3 +103,19 @@ std::vector<std::string> HashMap::getKeys() const{
 
   return res;
 }
+
+int HashMap::compteur(const std::string& key){
+
+	int value = 0;
+	bool exists = HashMap::get(key, value);
+	
+
+	if(exists) {
+		value += 1;
+		HashMap::put(key, value);
+	} else {
+		value = 1;
+		HashMap::put(key, value);
+	}
+
+}
