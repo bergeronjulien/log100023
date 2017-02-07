@@ -14,6 +14,7 @@ using namespace std;
 /* Ce programme permet de générer et modifier des hmap */
 int main(int argc, char** argv) {
 
+
 	HashMap mymap;
 
 	std::string word;
@@ -22,12 +23,9 @@ int main(int argc, char** argv) {
   file.open (argv[1]);
   if (!file.is_open()) return 0;
 
-  //cout << argv[1] << endl;
-
 	while (file >> word) {
-		//cout << word << " ";
+		mymap.compteur(word);
 	}
-
 
   //utilisation normale
 
@@ -41,30 +39,14 @@ int main(int argc, char** argv) {
 		if(value > valeur) {
 			valeur = value;
 			motPopulaire = mykeys[i];
-			cout << mykeys[i] << value << endl;
+			//cout << mykeys[i] << value << endl;
 		}
 	}
 
-  HashMap hmap;
-  hmap.put("v1",1);
-  hmap.put("v3",1);
-  hmap.put("v11",1);
-  hmap.put("v13",13);
+	cout 	<< "Le mot le plus populaire est : \""
+				<< motPopulaire << "\" avec " << valeur
+				<< " repetitions." << endl;
 
-  int value;
-  bool res = hmap.get("v13", value);
-  if (res)
-    cout << value << endl;
-
-  hmap.remove("v1");
-  res = hmap.get("v1", value);
-  if (res)
-    cout << "ERROR: " << value << endl;
-
-  std::vector<std::string> keys=hmap.getKeys();
-  for(int i=0;i<keys.size();i++){
-    cout << keys[i] << endl;
-  }
 
   return 0;
 }
