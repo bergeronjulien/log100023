@@ -25,9 +25,6 @@ int main(int argc, char** argv) {
   //cout << argv[1] << endl;
 
 	while (file >> word) {
-		if(word != " ") {
-			mymap.compteur(word);
-		} // À RETIRER
 		//cout << word << " ";
 	}
 
