@@ -10,7 +10,17 @@ v.  24/01/2017
 5-­b)  [  /2]  
 Copie  du  log:  [  /1]  
 E1.3  [  /10]  
-	3-­a)  [  /3]  
+	3-­a)
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   main.cpp
+
+no changes added to commit (use "git add" and/or "git commit -a")	
+	  [  /3]  
 	3-­b)  [  /1]  
 	6-­a)  [  /3]  
 	6-­b)  [  /2]  
@@ -20,7 +30,59 @@ E1.4  [  /10]
 	5-­b)  [  /3]  
 	5-­c)  [  /3]  
 7)  BONUS  [/1]  
-	Copie  du  log:  [  /1]  
+	Copie  du  log:  
+	
+* commit e1aea2697f8f6634e1ff6e7605325823bae9b096 (HEAD -> master, origin/master, origin/HEAD)
+| Author: Loïc Bellemare-Alford <loicbellemare@hotmail.com>
+| Date:   Mon Feb 6 19:37:02 2017 -0500
+| 
+|     Ajout de la fonction pour retourner un hash
+|  
+* commit aa69d778c0a26638fe9f9197e39372ae73150d47
+| Author: Julien Bergeron <juberi@l4712-05.info.polymtl.ca>
+| Date:   Wed Jan 25 16:25:01 2017 -0500
+| 
+|     Modification du odt
+|  
+* commit 620abdfb365761bd3898e7897dfaa6e614aeef67
+| Author: Julien Bergeron <juberi@l4712-05.info.polymtl.ca>
+| Date:   Wed Jan 25 16:17:17 2017 -0500
+| 
+|     Implementation methode compteur
+|  
+* commit 2d44bad729d68614de9989adc659ece09d215a9f
+| Author: Julien Bergeron <juberi@l4712-05.info.polymtl.ca>
+| Date:   Wed Jan 25 15:51:55 2017 -0500
+| 
+|     ajout methode compteur
+|  
+* commit ebbac9de771cfdce969349ca5b7ed6e832951453
+| Author: Julien Bergeron <juberi@l4712-05.info.polymtl.ca>
+| Date:   Wed Jan 25 15:46:52 2017 -0500
+| 
+|     Ajout du rapport
+|  
+* commit d311a41d91bdfd06aa54f3e594ab57268d54cbb1
+| Author: Julien Bergeron <juberi@l4712-05.info.polymtl.ca>
+| Date:   Wed Jan 25 15:27:34 2017 -0500
+| 
+|     First commit
+|  
+* commit 1b2a6fdc629acea28d1672e5941d0912728eeb7f
+| Author: admin <gigl-technique@polymtl.ca>
+| Date:   Tue Sep 11 15:51:58 2012 -0400
+| 
+|     Commit administratif
+|  
+* commit 70996bca0add50159f527a3495c0e19d965081c1
+  Author: Luc Lalonde <Luc.Lalonde@polymtl.ca>
+  Date:   Tue Sep 11 15:31:01 2012 -0400
+  
+      Premier commit
+
+	
+	
+	[  /1]  
 E2.1  [  /5]  
 	Insérez  votre  graphe  de  dépendances  ici  [  /5]  
 E2.2  [  /10]  
