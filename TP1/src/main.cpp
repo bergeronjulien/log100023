@@ -25,11 +25,13 @@ int main(int argc, char** argv) {
   //cout << argv[1] << endl;
 
 	while (file >> word) {
-		map.compteur(word);
+		if(word != " ") {
+			map.compteur(word);
+		}
 	}
 
 
   //utilisation normale
-	
+
   return 0;
 }
