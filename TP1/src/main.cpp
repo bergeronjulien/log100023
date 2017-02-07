@@ -1,4 +1,4 @@
-/* 
+/*
  * File:   main.cpp
  * Author: bram
  *
@@ -14,40 +14,22 @@ using namespace std;
 /* Ce programme permet de générer et modifier des hmap */
 int main(int argc, char** argv) {
 
+	HashMap map;
+
 	std::string word;
-	
+
 	ifstream file;
-  file.open (argv[0]);
+  file.open (argv[1]);
   if (!file.is_open()) return 0;
-    
-  // cout << argv[0] << endl;
-	
+
+  //cout << argv[1] << endl;
+
 	while (file >> word) {
-  	cout <<  word << endl;
+		map.compteur(word);
 	}
 
-  //utilisation normale
-  HashMap hmap;
-  hmap.put("v1",1);
-  hmap.put("v3",1);
-  hmap.put("v11",1);
-  hmap.put("v13",13);
-  
-  int value;
-  bool res = hmap.get("v13", value);
-  if (res)
-    cout << value << endl;
-  
-  hmap.remove("v1");
-  res = hmap.get("v1", value);
-  if (res)
-    cout << "ERROR: " << value << endl;
 
-  std::vector<std::string> keys=hmap.getKeys();
-  for(int i=0;i<keys.size();i++){
-    cout << keys[i] << endl;
-  }
-  
+  //utilisation normale
+	
   return 0;
 }
-

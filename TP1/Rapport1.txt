@@ -126,6 +126,13 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 	6-­b) Non puisqu'on a changé des lignes différentes. IL y a que des problèmes si le même contenu est modifié.  [  /2]  
 	Copie  du  log:  [  /1]  
+	
+	Auto-merging TP1/src/main.cpp
+	Auto-merging TP1/Rapport1.txt
+	CONFLICT (content): Merge conflict in TP1/Rapport1.txt
+	Automatic merge failed; fix conflicts and then commit the result.
+
+	
 E1.4  [  /10]  
 	5-­a)  [  /3]  
 	5-­b)  [  /3]  
