@@ -11,7 +11,7 @@
 
 using namespace std;
 
-/* */
+/* Ce programme permet de générer et modifier des hmap */
 int main(int argc, char** argv) {
 
 	std::string word;
