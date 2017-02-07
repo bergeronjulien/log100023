@@ -117,5 +117,7 @@ int HashMap::compteur(const std::string& key){
 		value = 1;
 		HashMap::put(key, value);
 	}
+	
+	return value;
 
 }
