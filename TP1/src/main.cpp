@@ -6,12 +6,25 @@
  */
 
 #include <iostream>
+#include <fstream>
 #include "HashMap.h"
 
 using namespace std;
 
 /* */
 int main(int argc, char** argv) {
+
+	std::string word;
+	
+	ifstream file;
+  file.open (argv[0]);
+  if (!file.is_open()) return 0;
+    
+  // cout << argv[0] << endl;
+	
+	while (file >> word) {
+  	cout <<  word << endl;
+	}
 
   //utilisation normale
   HashMap hmap;
