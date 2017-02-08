@@ -24,9 +24,8 @@ E1.1  [  /3]
 
    Premier commit
 	  
-	b)  [  /1]  
+	b) "git log" affiche la liste des commits effectués. "git log -p" affiche en plus tout les changements de chaque commit.  [  /1]  
 	
-	????????????????????????????
 	
 E1.2  [  /10]  
 	2-­a)  [  /3]
@@ -48,7 +47,7 @@ E1.2  [  /10]
       ../.~lock.rapport_tp1.odt# 
       pari 
        
-	2-­b)  ???????????????????????????????????? [  /1]  
+	2-­b) Oui c'est normal. Ça indique que le fichier a été modifié.  [  /1]  
 	5-­a)  Already up-to-date. [  /3]                       
 	5-­b)  En faisant un git pull avant la modification du fichier, on s'est assuré de ne pas avoir de conflits. [  /2]  
 	Copie  du  log: [  /1]   
@@ -162,12 +161,76 @@ E2.1  [  /5]
 	Insérez  votre  graphe  de  dépendances  ici  [  /5]  
 E2.2  [  /10]  
 	Fichier  Makefile  [  /7]  
+	
+		all: pari
+	 
+		pari:  SomeKeyHash.o HashMap.o main.o
+			g++ -o build/pari  build/SomeKeyHash.o build/HashMap.o build/main.o
+			echo "pari finished building"
+
+		HashMap.o: src/HashMap.h src/HashMap.cpp src/HashNode.h src/SomeKeyHash.h
+			mkdir -p build
+			g++ -c -o build/HashMap.o src/HashMap.cpp
+			echo "HashMap.o finished building"
+	
+		SomeKeyHash.o : src/SomeKeyHash.h src/SomeKeyHash.cpp
+			mkdir -p build
+			g++ -c -o build/SomeKeyHash.o src/SomeKeyHash.cpp
+			echo "SomeKeyHash.o finished building"
+	
+		main.o: src/main.cpp src/HashMap.h
+			g++ -c -o build/main.o src/main.cpp
+			echo "main.o finished building"
+
+		install: 
+			mkdir site
+			cp data/*.txt site/
+			cp build/pari site/
+
+
+		clean:
+			rm -rf *.o
+			rm -rf site/*
+	
+		mrproper: clean
+			rm -rf build site
+	
 	Exécutez  «make»,  puis  insérez  la  sortie  des  deux  commandes  «touch  ...;;  make»  [  /3]  
+	
+	g++ -c -o build/HashMap.o src/HashMap.cpp 
+	echo "HashMap.o finished building"
+	HashMap.o finished building
+	g++ -c -o build/main.o src/main.cpp 
+	echo "main.o finished building"
+	main.o finished building
+	g++ -o build/pari  build/SomeKeyHash.o build/HashMap.o build/main.o 
+	echo "pari finished building"
+	pari finished building
+	
+	--------
+	
+	make: Nothing to be done for 'all'.
+
+
   
 Parie  2  :  [  /8]  
 2)  
 	a)  [  /2]  
+	
+		real	7m18.502s
+		user	3m22.656s
+		sys	0m22.720s
+
+	
 	b)  [  /2]  
-	c)  [  /2]  
-	b)  [  /2]  
+	
+	real	4m18.810s
+	user	1m51.348s
+	sys	0m13.497s
+
+	
+	c) Oui, le temps diminue environ de moitié puisqu'une partie des fichiers a déjà été compilé et ne sont pas recompilé une deuxième fois (sauf s'ils sont changés).  [  /2]  
+
+
+	
   
